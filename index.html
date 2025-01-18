@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Links para o CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilizando a barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pagina">
+        <div class="fundo">
+            <video autoplay muted loop>
+                <source src="./ults/0_Space_Stars_3840x2160.mp4" type="video/mp4">
+            </video>
+
+            <div class="principal">
+                <div class="apresentacao">
+                    <h1>Prazer, Me-chamo</h1>
+                </div>
+
+                <div class="nome">
+                    <h1>Vinicius Nascimento</h1>
+                </div>
+
+                <div class="funcao">
+                    <h1>Desenvolvedor Front-End!</h1>
+                </div>
+
+                <div class="rede-social">
+                    <nav>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/vinicius-nascimento-buzzo" target="_blank"><img src="./ults/linkedin.png" alt="LinkedIn"></a></li>
+                            <li><a href="https://github.com/vinicius311006" target="_blank"><img src="./ults/github.png" alt="GitHub"></a></li>
+                            <li><a href="#" target="_blank"><img src="./ults/instagram.png" alt="Instagram"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="seta">
+                <a href="#ferramentas"><img src="./ults/seta-para-baixo.png" alt="Seta para baixo"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="ferramentas">
+        <div class="ferramentas">
+            <div class="titulo">
+                <h1>Habilidades</h1>
+            </div>
+
+            <div class="conteudo">
+                <div class="ferramenta" data-aos="fade-right">
+                    <img src="./ults/html.png" alt="HTML">
+                    <h1>HTML</h1>
+                    <p>HTML é a linguagem de marcação padrão para criar páginas da web.</p>
+                </div>
+
+                <div class="ferramenta" data-aos="fade-right">
+                    <img src="./ults/css.png" alt="CSS">
+                    <h1>CSS</h1>
+                    <p>CSS é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em
+                        HTML.</p>
+                </div>
+
+                <div class="ferramenta" data-aos="fade-right">
+                    <img src="./ults/js.png" alt="JavaScript">
+                    <h1>JavaScript</h1>
+                    <p>JavaScript é uma linguagem de programação que permite a criação de conteúdo dinâmico na web.</p>
+                </div>
+
+                <div class="ferramenta" data-aos="fade-right">
+                    <img src="./ults/react.png" alt="React">
+                    <h1>React</h1>
+                    <p>React é uma biblioteca JavaScript para construir interfaces de usuário.</p>
+                </div>
+
+                <div class="ferramenta" data-aos="fade-right">
+                    <img src="./ults/node.png" alt="Node.js">
+                    <h1>Node.js</h1>
+                    <p>Node.js é um ambiente de execução JavaScript que permite a execução de código JavaScript no lado
+                        do servidor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projetos">
+        <div class="titulo-projetos">
+            <h1>Projetos</h1>
+        </div>
+
+        <div class="conteudo-projetos">
+            <div class="projeto" data-aos="fade-right">
+                <h1>Alucar</h1>
+                <img src="./ults/projeto-1.png" alt="Projeto 1">
+                <p>Locadora de Veículos <br>
+                    Projeto desenvolvido para a conclusão do curso técnico <br>
+                    Tecnologias utilizadas: <br>
+                    HTML, CSS, JavaScript, Node.js, MySQL, Bootstrap.
+                </p>
+            </div>
+
+            <div class="projeto" data-aos="fade-right">
+                <h1>Calculadora Básica</h1>
+                <img src="./ults/calculadora.png" alt="Projeto 2">
+                <p>Tecnologias utilizadas: <br>HTML, CSS, JavaScript.</p>
+            </div>
+
+            <div class="projeto" data-aos="fade-right">
+                <h1>Página de Troca de Cor</h1>
+                <img src="./ults/trocaCor.png" alt="Projeto 3">
+                <p>Tecnologias utilizadas: <br>React, CSS.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contato" data-aos="fade-right">
+        <div class="breve">
+            <h1>Contato</h1>
+            <p>Desenvolvedor Web</p>
+
+            <div class="outros">
+                <div class="formacao">
+                    <h1>Formação</h1>
+                    <ul>
+                        <li>📚 Cursando Análise e Desenvolvimento de Sistemas na UNIP</li>
+                        <li>📚 Curso Técnico em Informática no Senac</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="foto">
+                <img src="./ults/foto.png" alt="Foto de Vinicius Nascimento">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.querySelector('.seta a').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#ferramentas').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

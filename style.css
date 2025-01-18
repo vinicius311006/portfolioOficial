@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #d8d8d8;
+    z-index: 1;
+    position: relative;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Fundo da primeira seção */
+.fundo {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fundo video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.principal {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Garante que os elementos sejam centralizados */
+}
+
+/* Redes sociais */
+.rede-social img {
+    width: 50px;
+    height: auto;
+}
+
+.rede-social ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+}
+
+.rede-social li {
+    margin: 0 15px;
+}
+
+/* Nome */
+.nome h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffffe8;
+    text-stroke: 1px #ffffffc5;
+    background: #CFCFCF;
+    background: radial-gradient(circle farthest-corner at center center, #cfcfcf17 0%, #0000002d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    text-align: center;
+    animation: move 2.5s infinite ease-in-out;
+}
+
+/* Função do título */
+.funcao h1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: monospace;
+    border-right: 4px solid;
+    white-space: nowrap;
+    width: 24ch;
+    overflow: hidden;
+    animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
+}
+
+/* Efeitos de animação */
+@keyframes animaMarcador {
+    50% {
+        border-right: transparent;
+    }
+}
+
+@keyframes animaTexto {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes move {
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Estilo da seta */
+.seta img {
+    width: 75px;
+    height: auto;
+}
+
+/* Seção de Ferramentas */
+#ferramentas {
+    height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: move 2.5s infinite ease-in-out;
+}
+
+.ferramentas .titulo h1 {
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.ferramentas .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ferramenta {
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ferramenta img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.ferramenta h1 {
+    font-size: 2em;
+    color: #d8d8d8;
+}
+
+.ferramenta p {
+    font-size: 1.5em;
+    color: #6e6e6e;
+}
+
+.ferramenta:hover {
+    transform: scale(1.1);
+}
+
+/* Seção de Projetos */
+.projetos {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.titulo-projetos h1 {
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.conteudo-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto {
+    width: 500px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.projeto img {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.projeto h1 {
+    font-size: 2em;
+    color: #d8d8d8;
+}
+
+.projeto p {
+    font-size: 1.5em;
+    color: #6e6e6e;
+}
+
+.projeto:hover {
+    transform: scale(1.1);
+}
+
+/* Seção de Contato */
+.contato {
+    margin-top: 15%;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+}
+
+.foto {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.foto img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.breve {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.outros ul,
+.formacao ul {
+    list-style: none;
+    padding: 0;
+}
+
+.formacao li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+.formacao h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.breve p {
+    font-size: 1.5rem;
+    color: #6e6e6e;
+}
+
+.breve h1 {
+    margin-top: 5%;
+    font-size: 3rem;
+}
